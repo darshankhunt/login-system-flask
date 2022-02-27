@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h2>About You:</h2>
+    <form method="post" action="http://127.0.0.1:5000/update">
+
+        
+        <label >Your First Name: </label>
+        <input type="text" name="your_fname" placeholder="" value="{{data[1]}}" required/> <br><br>
+        <label >Your Last Name: </label>
+        <input type="text" name="your_lname" placeholder="Your Last name" value="{{data[2]}}" /> <br><br>
+        <label >Your Email: </label>
+        <input type="email" name="your_email" placeholder="{{session['email']}}" required disabled/><br><br>
+        <label >Gender: </label>
+        <input type="radio" name="gen"  value="Male" placeholder="male" />{{data[4]}}
+        <input type="radio" name="gen"  value="Female" placeholder="{{data[4]}}" />{{data[4]}}<br><br>
+        <label >DOB: </label>
+        <input type="date" name="dob" value="{{data[5]}}" /><br><br>
+        <label >Mobile Number: </label>
+        <input type="number" name="mo_no" placeholder="Your Mobile Number" value="{{data[6]}}" /><br><br>
+
+        <!-- <input type="button" value="Update"> -->
+        <button type="submit">Update</button>
+        <button type="reset">Cancle</button>
+        <button type="button" onclick="window.location='//127.0.0.1:5000/web'">Back</button>
+
+    </form>
+</body>
+</html>
